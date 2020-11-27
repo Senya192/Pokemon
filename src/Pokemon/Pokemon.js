@@ -8,23 +8,22 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-// import img1 from "../img/001.png";
-import imgs from "../img";
 import "./Pokemon.css"
-import NamePokemon from '../NamePokemon/NamePokemon'
-import StaticContent from "../StaticContent/StaticContent";
+
 
 const useStyles = makeStyles({
 	root: {
-		width: 345,
+		width: 318,
+
 	},
 });
 
-export default function ImgMediaCard({ img }, props) {
+export default function ImgMediaCard({ img, name }) {
 	const classes = useStyles();
 	// console.log(img);
 	return (
 		<div className="Pokemon-card">
+
 			<Card className={classes.root}>
 				<CardActionArea>
 					<CardMedia
@@ -43,12 +42,11 @@ export default function ImgMediaCard({ img }, props) {
 				</CardActionArea>
 				<CardActions>
 					<Button size="small" color="primary">
-
+						{name}
 					</Button>
 
 				</CardActions>
 			</Card>
-
 
 
 		</div>

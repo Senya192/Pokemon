@@ -1,9 +1,17 @@
 .App {
 	text-align: center;
+	background-image: url("./Pokemon/pokemon.jpg");
+}
+
+.App h1 {
+	font-size: 50px;
+	color: rgb(97, 248, 9);
+	margin: 0;
+}
+
+.App-Pokemon {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	background-image: url("./Pokemon/pokemon.jpg");
-	height: 100%;
 }

@@ -1,27 +1,23 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import "./App.css";
 import Pokemon from "./Pokemon/Pokemon";
-import imgs from "./img";
-import NamePokemon from "./NamePokemon/NamePokemon";
-import StaticContent from "./StaticContent/StaticContent";
+import { pokemons } from "./StaticContent/StaticContent";
+import { Search } from './Search/Search'
 
-
-function App() {
+export default function App() {
 	return (
+
+
 		<div className="App">
-
-			{/* {imgs.map((img) => {
-				// console.log(img.default);
-				return <Pokemon img={img.default} />;
-			})} */}
-
-			<StaticContent />
-
+			<h1>Pokemons</h1>
+			<Search />
+			<div className='App-Pokemon'>
+				{pokemons.map(({ id, img, name }) => {
+					return <Pokemon key={id} img={img} name={name} />;
+				})}
+			</div>
 
 		</div>
-
-
 	);
-};
+}
 
-export default App;
